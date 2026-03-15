@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="todoList">
+        <h2>To Do List</h2>
+        <form method="post" action="/todoList">
+            <input type="text" name="work" placeholder="Enter your work">
+            <button class="add">Add</button>
+        </form>
+
+        <br>
+
+        <% for(work of works) { %>
+            <form method="post" action="/todoList/<%= work.work %>?_method=DELETE" class="workForm">
+                
+                        <div class="contentWork">
+                            <p><%= work.work %></p>
+                        </div>
+                        <button class="delete">Delete</button>
+            </form>
+        <% } %>
+    </div>
+</body>
+</html>
