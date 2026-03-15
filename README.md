@@ -7,7 +7,5 @@ The project focuses on implementing CRUD operations (Create, Read, Update, Delet
 # Features
 	•	Add new tasks
 	•	View all tasks
-	•	Mark tasks as completed
-	•	Edit existing tasks
 	•	Delete tasks
 	•	Persistent data storage using SQL database
